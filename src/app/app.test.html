@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unique Form</title>
+    <link rel="stylesheet" href="./app.component.css">
 </head>
 <body>
-    
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <input type="text" id="name" class="input-field" placeholder="Your Name" required><br>
+            <input type="email" id="email" class="input-field" placeholder="Your Email" required><br>
+            <textarea id="message" class="input-field" placeholder="Your Message" rows="4" required></textarea><br>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
 </body>
 </html>
