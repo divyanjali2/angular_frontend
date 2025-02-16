@@ -19,30 +19,61 @@ import { RouterOutlet } from '@angular/router';
 
 
 //Composing components (component inside another component)
-@Component ({
-  selector: 'app-user', //unique id
-  template:`Username: {{ username }}`,
-})
+// @Component ({
+//   selector: 'app-user', //unique id
+//   template:`Username: {{ username }}`,
+// })
 
-export class UserComponent {
-  username = 'YoungTech';
-}
+// export class UserComponent {
+//   username = 'Navodya Divyanjali';
+// }
 
+// @Component({
+//   selector: 'app-root',
+//   template: `
+//     <section>
+//       <app-user />
+//     </section>
+//   `,
+//   styles: [
+//     `
+//     :host {
+//       color: rgb(5, 94, 45);
+//     }
+//     `
+//   ],
+//   imports: [UserComponent],
+// })
+
+// export class AppComponent {}
+
+
+//Control flow in componens - @if
 @Component({
   selector: 'app-root',
   template: `
-    <section>
-      <app-user />
-    </section>
+    <div>
+      @if (isServerRunning) {
+        <span class="running">😍 Yes, server is running</span>
+      } @else {
+        <span class="not-running">😕 No, server is not running</span>
+      }
+    </div>
   `,
+  //applying colors based on true false
   styles: [
     `
-    :host {
-      color: rgb(5, 94, 45);
+    .running {
+      color: green;
+      font-weight: bold;
+    }
+    .not-running {
+      color: red;
+      font-weight: bold;
     }
     `
   ],
-  imports: [UserComponent],
 })
-
-export class AppComponent {}
+export class AppComponent {
+  isServerRunning = false; 
+}
