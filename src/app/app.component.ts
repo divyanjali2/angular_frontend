@@ -79,21 +79,46 @@ import { RouterOutlet } from '@angular/router';
 // }
 
 //Control flow in componens - @for
-@Component({
+// @Component({
+//   selector: 'app-root',
+//   template: `
+//     @for(user of users; track user.id) {
+//       <p>{{ user.name }} is {{ user.age }} years old</p>
+//     }
+//   `,
+//   styles: [
+//     `
+//     :host {
+//       color: rgb(9, 18, 95);
+//       font-weight: bold;
+//     }
+//     `
+//   ],
+// })
+
+// export class AppComponent {
+//   users = [
+//     {id: 0, name: 'Sarah', age: 23},
+//     {id: 1, name: 'John', age: 18},
+//     {id: 2, name: 'Willy', age: 20},
+//     {id: 3, name: 'Smith', age: 12},
+//     {id: 4, name: 'Jane', age: 15},
+//   ]
+// }
+
+//Property binding in angular
+@Component ({
   selector: 'app-root',
+  styleUrls: ['app.component.css'],
   template: `
-    @for(user of users; track user.id) {
-      <p>{{ user.name }} is {{ user.age }} years old</p>
-    }
+    <div [contentEditable] = "isEditable"></div>
+    <img [src]=src [alt]=alt >
   `,
 })
 
 export class AppComponent {
-  users = [
-    {id: 0, name: 'Sarah', age: 23},
-    {id: 1, name: 'John', age: 18},
-    {id: 2, name: 'Willy', age: 20},
-    {id: 3, name: 'Smith', age: 12},
-    {id: 4, name: 'Jane', age: 15},
-  ]
+  isEditable = true;
+  src = 'image.jpg';
+  alt = 'No';
 }
+
