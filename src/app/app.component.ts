@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styles: [
     `
     :host {
-      color: #a133ed;
+      color:rgb(5, 94, 45);
     }
     `
   ],
