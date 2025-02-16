@@ -83,7 +83,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   template: `
     @for(user of users; track user.id) {
-      <p>{{ user.name }} is {{ user.age }}</p>
+      <p>{{ user.name }} is {{ user.age }} years old</p>
     }
   `,
 })
