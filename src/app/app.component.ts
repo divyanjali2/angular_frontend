@@ -3,18 +3,17 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  // templateUrl: './app.component.html',
-  template : 'Welcome to Angular!!',
+  imports: [RouterOutlet], 
+  template: `Hello {{ city }}, {{ 1 + 1 }}`,
   styles: [
     `
     :host {
-      color:rgb(5, 94, 45);
+      color: rgb(5, 94, 45);
     }
     `
   ],
-  // styleUrl: './app.component.css'
+  // styleUrls: ['./app.component.css'] // Corrected from styleUrl to styleUrls
 })
 export class AppComponent {
-  title = 'FrontEnd';
+  city = 'San Francisco';
 }
